@@ -15,5 +15,5 @@ def calculate_co2(mode_of_transport, trip_length_m, trip_time_s):
         emissions = trip_length_m*emissions_list[mode_of_transport_options.index(mode_of_transport)]/1000 #In g, km
     else:
         emissions = False
-    emissions = emissions/1000 # In kg
+    emissions = emissions/1000*3.6 # In kg
     return emissions
